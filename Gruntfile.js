@@ -13,7 +13,7 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: ['<%= jshint.files %>'],
+            files: ['<%= jshint.files %>', 'app/assets/sass/*.scss'],
             tasks: ['jshint']
         },
         exec: {
@@ -22,11 +22,17 @@ module.exports = function(grunt) {
             }
         },
         copy: {
-            assets: {
+            fonts: {
                 expand: true,
                 cwd: "bower_components/open-sans-fontface/fonts",
                 src: ['**'],
                 dest: "<%=outputPath%>/css/fonts"
+            },
+            img: {
+                expand: true,
+                cwd: "app/assets/img",
+                src: ['**'],
+                dest: "public/img"
             }
         },
         sass: {
@@ -63,8 +69,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['copy:assets', 'sass:dev']);
-    grunt.registerTask('ci', ['copy:assets', 'sass:dist']);
+    grunt.registerTask('watch', ['default']);
+    grunt.registerTask('default', ['copy:fonts', 'copy:img', 'sass:dev']);
+    grunt.registerTask('ci', ['copy:assets', 'copy:img', 'sass:dist']);
     grunt.registerTask('server', ['exec:server']);
 
 };
