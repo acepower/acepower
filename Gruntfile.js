@@ -31,7 +31,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: 'app/assets/img',
                     src: ['**/*.{png,jpg,svg}'],
-                    dest: 'app/assets/img'
+                    dest: 'public/img'
                 }]
             }
         },
@@ -41,12 +41,6 @@ module.exports = function(grunt) {
                 cwd: "bower_components/open-sans-fontface/fonts",
                 src: ['**'],
                 dest: "<%=outputPath%>/css/fonts"
-            },
-            img: {
-                expand: true,
-                cwd: "app/assets/img",
-                src: ['**'],
-                dest: "public/img"
             }
         },
         sass: {
@@ -85,8 +79,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     grunt.registerTask('watch', ['default']);
-    grunt.registerTask('default', ['imagemin:dynamic', 'copy:fonts', 'copy:img', 'sass:dev']);
-    grunt.registerTask('ci', ['imagemin:dynamic', 'copy:assets', 'copy:img', 'sass:dist']);
+    grunt.registerTask('default', ['imagemin:dynamic', 'copy:fonts', 'sass:dev']);
+    grunt.registerTask('ci', ['imagemin:dynamic', 'copy:assets', 'sass:dist']);
     grunt.registerTask('server', ['exec:server']);
 
 };
