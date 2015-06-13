@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    div.contain-to-grid.sticky(data-topbar, role='navigation', data-options='sticky_on: large')
+        nav.top-bar
+            h1="acepower.io"
+    div.container
+        div.row
+            div.large-5.medium-5.columns.banner-image
+                img(src='http://foundation.zurb.com/assets/img/responsive-banner-main.svg')
+            div.large-7.medium-7.columns.banner-info
+                h2="Powered solutions to empower you"
+                p="Coming soon"
+
+

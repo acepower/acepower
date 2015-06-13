@@ -1,0 +1,34 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+body, html {
+  margin: 0;
+  border: 0;
+  font-family: 'Open Sans', sans-serif;
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+.top-bar {
+  h1 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 100;
+  }
+}
+
+.banner-image img {
+  width: 95%;
+}
