@@ -97,13 +97,43 @@ p {
   li:before {
     content: "";
     display: block;
-    height: 50px;
-    width: 57px;
+    height: 80px;
+    width: 70px;
     margin: 0 auto;
   }
 
   li {
     list-style-type: none;
     padding-bottom: 5rem;
+  }
+
+  .native-app:before {
+    background: url('/img/mobile.svg') no-repeat top left;
+    background-size: 100%;
+  }
+
+  .scalable:before {
+    background: url('/img/scale.svg') no-repeat top left;
+    background-size: 100%;
+  }
+
+  .latest:before {
+    background: url('/img/latest.svg') no-repeat top left;
+    background-size: 100%;
+  }
+
+  .opensource:before {
+    background: url('/img/opensource.svg') no-repeat top left;
+    background-size: 100%;
+  }
+
+  .security:before {
+    background: url('/img/security.svg') no-repeat top left;
+    background-size: 100%;
+  }
+
+  .support:before {
+    background: url('/img/support.svg') no-repeat top left;
+    background-size: 100%;
   }
 }
