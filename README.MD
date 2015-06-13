@@ -1,6 +1,6 @@
 # acepower.io
 
 ## Install
-- Git Clone this repository
+- git clone git@github.com:acepower/acepower.git acepower
 - npm install
 - nodemon ./bin/www
