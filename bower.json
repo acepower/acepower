@@ -1,0 +1,19 @@
+{
+  "name": "acepower.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/acepower/acepower",
+  "authors": [
+    "laurencehammond <laurence.hammond@bbc.co.uk>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "open-sans-fontface": "~1.4.0"
+  }
+}
