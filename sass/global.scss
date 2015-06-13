@@ -11,24 +11,44 @@ body, html {
   }
 }
 
+.fw100, .fw100 * {
+  font-weight: 100;
+}
+
 h1 {
   margin: 0;
   padding: 0;
 }
 
 h2 {
-  font-size: 30px;
-  font-weight: 200;
+  font-size: 39px;
 }
 
 .top-bar {
-  h1 {
-    color: #ffffff;
-    font-size: 28px;
-    font-weight: 100;
+  .title-area {
+    padding-left: 10px;
+
+    h1 {
+      color: #ffffff;
+      font-size: 28px;
+    }
   }
 }
 
+#menu.right {
+    a {
+      font-size: 16px;
+    }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.bg-variant {
+  background: #dee4e6;
+}
+
 .banner-image img {
-  width: 95%;
+  width: 100%;
 }

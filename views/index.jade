@@ -3,13 +3,25 @@ extends layout
 block content
     div.contain-to-grid.sticky(data-topbar, role='navigation', data-options='sticky_on: large')
         nav.top-bar
-            h1="acepower.io"
+            ul.title-area
+                h1.fw100="acepower.io"
+            section.top-bar-section
+                ul#menu.right
+                    li
+                        a Our Services
+                    li
+                        a Our Work
+                    li
+                        a About
+                    li
+                        a Contact Us
     div.container
-        div.row
-            div.large-5.medium-5.columns.banner-image
-                img(src='http://foundation.zurb.com/assets/img/responsive-banner-main.svg')
-            div.large-7.medium-7.columns.banner-info
-                h2="Powered solutions to empower you"
-                p="Coming soon"
-
-
+        div.full-width.bg-variant
+            div.row
+                div.large-5.medium-5.columns.banner-image
+                    img(src='http://foundation.zurb.com/assets/img/responsive-banner-main.svg')
+                div.large-7.medium-7.columns.banner-info.fw100
+                    h2="Powered solutions to empower you"
+                    p="Ace Power is a development agency and consultancy."
+                    p="High quality bespoke software - designed to last."
+                    p="With brilliant staff, a passion for technology and a forward thinking attitude Ace Power is the correct choice."
