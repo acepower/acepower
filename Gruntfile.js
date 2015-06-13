@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
     var path = require("path");
+    var svgo = require('imagemin-svgo');
 
     grunt.initConfig({
         staticPath: path.resolve() + "/app",
@@ -19,6 +20,19 @@ module.exports = function(grunt) {
         exec: {
             server: {
               command: 'nodemon ./bin/www'
+            }
+        },
+        imagemin: {
+            dynamic: {
+                options: {
+                    use: [svgo()]
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'app/assets/img',
+                    src: ['**/*.{png,jpg,svg}'],
+                    dest: 'app/assets/img'
+                }]
             }
         },
         copy: {
@@ -68,10 +82,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     grunt.registerTask('watch', ['default']);
-    grunt.registerTask('default', ['copy:fonts', 'copy:img', 'sass:dev']);
-    grunt.registerTask('ci', ['copy:assets', 'copy:img', 'sass:dist']);
+    grunt.registerTask('default', ['imagemin:dynamic', 'copy:fonts', 'copy:img', 'sass:dev']);
+    grunt.registerTask('ci', ['imagemin:dynamic', 'copy:assets', 'copy:img', 'sass:dist']);
     grunt.registerTask('server', ['exec:server']);
 
 };
