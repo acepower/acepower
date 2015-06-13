@@ -2,6 +2,6 @@
 
 ## Install
 - git clone git@github.com:acepower/acepower.git acepower
-- npm install
-- bower install
-- npm start
+- ./bin/install (If Windows run bin/installWin)
+- grunt
+- grunt server
