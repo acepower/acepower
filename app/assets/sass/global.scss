@@ -28,6 +28,11 @@ h2 {
   font-size: 39px;
 }
 
+ul, li {
+  padding: 0;
+  margin: 0;
+}
+
 .top-bar {
   .title-area {
     padding-left: 10px;
@@ -68,14 +73,20 @@ h2 {
 }
 
 #info {
+  ul {
+    padding-top: 5rem;
+  }
+
   li:before {
     content: "";
     display: block;
     height: 80px;
+    width: 57px;
     margin: 0 auto;
   }
 
   li {
     list-style-type: none;
+    padding-bottom: 5rem;
   }
 }
