@@ -37,6 +37,6 @@
     "npm": "2.1.18"
   },
   "scripts": {
-    "postinstall": "npm install && bower install && grunt"
+    "postinstall": "bower install && grunt"
   }
 }
