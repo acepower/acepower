@@ -1,10 +1,10 @@
 {
-  "name": "acepower",
-  "version": "0.0.0",
+  "name": "acepower.io",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "postinstall": "bower install && grunt"
+    "postinstall": "bower install && grunt ci"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
@@ -31,6 +31,7 @@
     "serve-favicon": "~2.2.1"
   },
   "devDependencies": {
+    "grunt-contrib-cssmin": "^0.12.3",
     "grunt-contrib-imagemin": "^0.9.4",
     "imagemin-svgo": "^4.1.2"
   },

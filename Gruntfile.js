@@ -55,18 +55,17 @@ module.exports = function(grunt) {
                     dest: "<%=outputPath%>/css",
                     ext: ".css"
                 } ]
-            },
-            dist: {
-                options: {
-                    style: "compressed"
-                },
-                files: [ {
+            }
+        },
+        cssmin: {
+            my_target: {
+                files: [{
                     expand: true,
-                    cwd: "<%=staticPath%>/assets/sass",
-                    src: [ "*.scss" ],
+                    cwd: "<%=outputPath%>/css",
+                    src: [ "*.css" ],
                     dest: "<%=outputPath%>/css",
                     ext: ".css"
-                } ]
+                }]
             }
         }
     });
@@ -77,10 +76,15 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    grunt.registerTask('watch', ['default']);
+    // grunt
     grunt.registerTask('default', ['imagemin:dynamic', 'copy:fonts', 'sass:dev']);
-    grunt.registerTask('ci', ['imagemin:dynamic', 'copy:assets', 'sass:dist']);
+
+    // grunt ci
+    grunt.registerTask('ci', ['imagemin:dynamic', 'copy:fonts', 'sass:dev', 'cssmin']);
+
+    // grunt server
     grunt.registerTask('server', ['exec:server']);
 
 };
