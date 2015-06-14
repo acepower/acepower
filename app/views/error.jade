@@ -1,6 +1,8 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+    div.container
+        div.full-width.bg-variant
+            div.row.error
+                h2="Sorry, something has gone wrong."
+                h3=error.status + " - " + message
