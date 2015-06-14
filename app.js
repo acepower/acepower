@@ -10,6 +10,8 @@ var routes = require('./app/routes/index');
 
 var app = express();
 
+process.env.PWD = process.cwd();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'app/views'));
 app.set('view engine', 'jade');
@@ -20,7 +22,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(process.env.PWD + '/public'));
 
 app.use('/', routes);
 
