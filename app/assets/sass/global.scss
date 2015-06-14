@@ -66,7 +66,7 @@ p {
   clear: both;
 }
 
-#menu.right {
+.menu.right {
     a {
       font-size: 16px;
     }
@@ -93,7 +93,7 @@ p {
   margin-bottom: 20px;
 }
 
-#info {
+.info {
   ul {
     padding-top: 5rem;
   }
@@ -139,5 +139,15 @@ p {
   .support:before {
     background: url('/img/support.svg') no-repeat top left;
     background-size: 100%;
+  }
+}
+
+.footer {
+  min-height: 5.5rem;
+  padding-top: 2.375rem;
+  color: #ffffff;
+
+  p {
+    font-size: 12px;
   }
 }
